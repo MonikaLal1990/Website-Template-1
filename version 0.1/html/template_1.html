@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>HTML Index with CSS</title>
+		<link rel="stylesheet" type="text/css" href="css/testWebsiteHome.css">		
+	</head>
+	
+	<body>
+		<div id="container">
+			<header id="title">
+				<h1>Your Website/Blog Name Goes here</h1>
+				<h2>Your tagline goes here</h2>
+			</header>
+			
+			<hr />
+			
+			<div id="navBar">
+                <div class="navItem">
+                    <a href="#tab-1"><b>Tab 1</b></a>
+                </div>
+            
+                <div class="navItem">
+                    <a href="#tab-2"><b>Tab 2</b></a>
+                </div>
+            
+                <div class="navItem">
+                    <a href="#tab-3"><b>Tab 3</b></a>
+                </div>
+
+				        <div class="navItem">
+                    <a href="#tab-4"><b>Tab 4</b></a>
+                </div>
+            
+                <div class="navItem">
+                    <a href="#tab-5"><b>Tab 5</b></a>
+                </div>
+            
+                <div class="navItem">
+                    <a href="#tab-6"><b>Tab 6</b></a>
+                </div>
+			</div>
+			
+			<hr />
+		
+			<div id="content1">
+				<h1> Content Heading #1 </h1>
+				<p>
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+				</p>
+				
+				<h1> Content Heading #2 </h1>
+				<p>
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+				</p>
+				
+				<h1> Content Heading #3 </h1>
+				<p>
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+				</p>
+			</div>
+			<br />
+			<hr />
+			<br />
+			
+			<div id="myLocation" class="info"></div>
+			
+			<div id="locationDetails" class="info">
+				Monika Lal<br />
+				40 S, Cedar Ave<br />
+				Long Beach, CA - 90802<br />
+			</div>
+			
+		 </div>
+     
+     <script>
+			
+			function myMap() {
+			  var myCenter = new google.maps.LatLng(33.766979, -118.196492);
+			  var mapCanvas = document.getElementById("myLocation");
+			  var mapOptions = {center: myCenter, zoom: 5};
+			  var map = new google.maps.Map(mapCanvas, mapOptions);
+			  var marker = new google.maps.Marker({position:myCenter});
+			  marker.setMap(map);
+			  var infowindow = new google.maps.InfoWindow({content:"My Location!"});
+			  google.maps.event.addListener(marker, 'click', function() {infowindow.open(map,marker);});
+			}
+			
+		</script>
+      
+      <!--40 S Chestnut Pl co-ordinates : 33.766979, -118.196492-->
+      <!--40 S Cedar Ave co-ordinates : 33.766784, -118.194899-->
+      
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPg7udV2hbdTOUvq9t_UQScEj0MHFZ7yQ&callback=myMap"></script>
+		</body>
+</html>
