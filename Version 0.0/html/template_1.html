@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	
+		<title>HTML Index with CSS</title>
+		
+		<style>
+      body {
+        background: fixed;
+        background-image: url('../images/Tunnel View 2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 630px;
+        position: relative;
+      }
+      #container {
+        background-color: rgba(255,255,255,.5);
+        width: 90%;
+        margin: 5% 0% 5% 5%;
+      }
+      #title {
+        text-align: center;
+        padding: 25px 0 0 0;
+      }
+     #navBar {
+        list-style-type: none;
+        margin: 0 40 0 40;
+        padding: 0;
+        overflow: hidden;
+      }
+      .navItem {
+        float: left;
+      }
+      .navItem a {
+        display: block;
+        color: rgba(0,0,0,0.7);
+        text-align: center;
+        padding: 15px 25px 15px 25px  ;
+        font-size: 20px;
+        text-decoration: none;
+      }
+      .navItem a:hover {
+        color: rgba(255,255,255,1);
+        background-color: rgba(0,0,0,0.5);
+      }
+      
+      hr {
+        margin: 10px 20px 10px 20px;
+      }
+      #content1 {
+        margin: 0 25px 0 25px; 
+        text-align: justify;
+      }
+      #content1 h1{
+        font-size: 25px;
+      }
+      #content1 p{
+        font-size: 15px;
+      }	
+      #myLocation {
+        margin: 25px;
+        width: 250px;
+        height: 250px;
+      }
+      #locationDetails {
+      }
+      
+    </style>		
+	
+  </head>
+	
+	<body>
+	
+    <div id="container">
+			<header id="title">
+				<h1>Your Website/Blog Name Goes here</h1>
+				<h2>Your tagline goes here</h2>
+			</header>
+			
+			<hr />
+			
+      <div>
+				<ul id="navBar">
+					<li class="navItem"><a href="#home"><b>Home</b></a></li>
+					<li class="navItem"><a href="#news"><b>News</b></a></li>
+					<li class="navItem"><a href="#about"><b>About</b></a></li>
+					<li class="navItem"><a href="#contact"><b>Contact</b></a></li>
+				</ul>
+			</div>
+			
+			<hr />
+		
+			<div id="content1">
+				<h1> Content Heading #1 </h1>
+				<p>
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+				</p>
+				
+				<h1> Content Heading #2 </h1>
+				<p>
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+				</p>
+				
+				<h1> Content Heading #3 </h1>
+				<p>
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+					A Quick Brown Fox Jumped Over a Lazy Dog
+				</p>
+			</div>
+			<br />
+			<hr />
+			<br />
+			
+			<div id="myLocation" class="info"></div>
+			
+			<div id="locationDetails" class="info">
+				Monika Lal<br />
+				40 S, Cedar Ave<br />
+				Long Beach, CA - 90802<br />
+			</div>
+			
+		</div>
+		
+		<script>
+			function myMap() {
+			  var myCenter = new google.maps.LatLng(33.766979, -118.196492);
+			  var mapCanvas = document.getElementById("myLocation");
+			  var mapOptions = {center: myCenter, zoom: 5};
+			  var map = new google.maps.Map(mapCanvas, mapOptions);
+			  var marker = new google.maps.Marker({position:myCenter});
+			  marker.setMap(map);
+			  var infowindow = new google.maps.InfoWindow({content:"My Location!"});
+			  google.maps.event.addListener(marker, 'click', function() {infowindow.open(map,marker);});
+			}
+		</script>
+		
+    <!--40 S Chestnut Pl co-ordinates : 33.766979, -118.196492-->
+		<!--40 S Cedar Ave co-ordinates : 33.766784, -118.194899-->
+    
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPg7udV2hbdTOUvq9t_UQScEj0MHFZ7yQ&callback=myMap"></script>
+		
+	</body>
+</html>
