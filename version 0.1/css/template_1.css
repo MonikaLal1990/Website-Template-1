@@ -1,0 +1,71 @@
+body {
+	background: fixed;
+	background-image: url('../images/Tunnel View 2.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 630px;
+	position: relative;
+}
+
+#container {
+	background-color: rgba(255,255,255,.5);
+	width: 90%;
+	margin: 5% 0% 5% 5%;
+}
+
+#title {
+	text-align: center;
+	padding: 25px 0 0 0;
+}
+
+#navBar {
+	list-style-type: none;
+	margin: 0 40px 0 40px;
+	padding: 0px;
+	overflow: hidden;
+	text-align: center;
+	font-size: 20px;
+}
+
+.navItem, .info {
+	display:inline-block;
+}
+
+.navItem a {
+	padding: 20px;
+	color: rgba(0,0,0,0.7);
+	text-decoration: none;
+}
+
+.navItem a:hover {
+	padding: 20px;
+	color: rgba(255,255,255,1);
+	background-color: rgba(0,0,0,0.5);
+}
+
+hr {
+	margin: 10px 20px 10px 20px;
+}
+
+#content1 {
+	margin: 0 25px 0 25px; 
+	text-align: justify;
+}
+
+#content1 h1{
+	font-size: 25px;
+}
+
+#content1 p{
+	font-size: 15px;
+}	
+
+#myLocation {
+	margin: 25px;
+	width: 250px;
+	height: 250px;
+}
+
+#locationDetails {
+
+}
